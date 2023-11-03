@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center m-4">
+    <button class="btn btn-primary" (click)="prevImage()">Prev</button>
+    <div class="middle-images">
+      <img [src]="currentImage">
+    </div>
+    <button class="btn btn-primary"  (click)="nextImage()">Next</button>
+  </div>
+  <div style="text-align:center">
+    <span class="dot" [ngClass]="{'active':isEnable==0}" (click)="currentSlide(0)"></span>
+    <span class="dot" [ngClass]="{'active':isEnable==1}" (click)="currentSlide(1)"></span>
+    <span class="dot" [ngClass]="{'active':isEnable==2}" (click)="currentSlide(2)"></span>
+  </div>
+</div>
